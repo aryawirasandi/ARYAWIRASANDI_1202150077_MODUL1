@@ -45,10 +45,10 @@ public class hasil extends AppCompatActivity {
         String hargaTotal = Integer.toString(total);
         if(uangSaku < total){
             hasil.setText("Rp"+hargaTotal);
-            Toast.makeText(this, "Anda Tidak bisa makan disini", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Jangan disini makan malaanya, uang kamu tidak cukup", Toast.LENGTH_SHORT).show();
         }else{
             hasil.setText("Rp"+hargaTotal);
-            Toast.makeText(this, "Anda bisa makan disini", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Disini Aja makan malamnya", Toast.LENGTH_SHORT).show();
         }
     }
 }
