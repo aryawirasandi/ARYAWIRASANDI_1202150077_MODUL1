@@ -18,27 +18,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input);
-//  Mencari berdasarkan id
+//  Get by Id
         Abnormal = (Button)findViewById(R.id.abnormal);
         Eatbus = (Button)findViewById(R.id.eatbus);
         makanan = (EditText)findViewById(R.id.makanan);
         porsi = (EditText)findViewById(R.id.qty);
 
-//  untuk Abnormal
+//  Abnormal BUtton
         Abnormal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pindah = new Intent(MainActivity.this,hasil.class);
+                Intent move = new Intent(MainActivity.this,hasil.class);
                 String tempat = Abnormal.getText().toString();
-                pindah.putExtra("makanan", makanan.getText().toString());
-                pindah.putExtra("tempat", tempat);
-                pindah.putExtra("porsi", porsi.getText().toString());
-                startActivity(pindah);
+                move.putExtra("makanan", makanan.getText().toString());
+                move.putExtra("tempat", tempat);
+                move.putExtra("porsi", porsi.getText().toString());
+                startActivity(move);
 
             }
         });
-
-        //untuk eatbus
+//  Eatbus Button
         Eatbus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
